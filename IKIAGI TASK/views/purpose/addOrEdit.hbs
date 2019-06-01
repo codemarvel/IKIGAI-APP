@@ -1,0 +1,35 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/purpose" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{purpose._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="" value="{{purpose.fullName}}">
+        <div class="text-danger">
+            {{purpose.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>passionate about</label>
+        <input type="text" class="form-control" name="passionate" placeholder="" value="{{purpose.passionate}}">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>good at</label>
+            <input type="text" class="form-control" name="good" placeholder="" value="{{purpose.good}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>can earn money in</label>
+            <input type="text" class="form-control" name="earnmoney" placeholder="" value="{{purpose.earnmoney}}">
+        </div>
+        <div class="form-group col -md-6 ">
+            <label>what world needs</label>
+            <input type="text" class="form-control" name="worldneeds" placeholder="" value="{{purpose.worldneeds}}">
+        </div>
+
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+
+</form>

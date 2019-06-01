@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/"><i class="fa fa-plus"></i> Create New</a>user  List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>passionate about</th>
+            <th>good at</th>
+            <th>can earn money</th>
+            <th>what world needs</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+             <td>{{this.fullName}}</td>
+            <td>{{this.passionate}}</td>
+            <td>{{this.good}}</td>
+            <td>{{this.earnmoney}}</td>
+            <td>{{this.worldneeds}}</td>
+            <td>
+                <a href="/purpose/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/purpose/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
